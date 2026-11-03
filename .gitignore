@@ -5,3 +5,4 @@ coverage/
 .env*
 intake/
 .DS_Store
+frontend/deployment.json

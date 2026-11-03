@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Turing • Votação</title><link rel="stylesheet" href="/style.css"><script defer src="/ethers.js"></script><script defer src="/app.js"></script></head>
+<body>
+<header><a class="brand" href="/">T<span>◈</span>RING</a><span class="network">Hardhat · rede local</span><button id="connect">Conectar carteira</button></header>
+<main>
+<section class="intro"><p class="eyebrow">PROJETOS FINAIS · BLOCKCHAIN</p><h1>Boas ideias<br>merecem <em>Turings.</em></h1><p>Escolha um projeto e reconheça quem construiu. Cada voto cria tokens para o aluno escolhido.</p></section>
+<div id="message" role="status" aria-live="polite">Carregando contrato…</div>
+<section class="stats" aria-label="Resumo"><div><span>Votação</span><strong id="status">—</strong></div><div><span>Turings em circulação</span><strong id="supply">—</strong></div><div><span>Seu saldo</span><strong id="balance">—</strong></div><div><span>Seus votos</span><strong id="count">—</strong></div></section>
+<div class="columns"><section class="card"><p class="eyebrow">SUA PARTICIPAÇÃO</p><h2>Faça sua escolha</h2><p id="identity">Conecte uma carteira cadastrada para votar.</p><form id="vote-form"><label for="recipient">Aluno</label><select id="recipient" required></select><label for="amount">Quantidade de Turings</label><select id="amount"><option value="1">1 Turing</option><option value="2">2 Turings</option></select><button id="vote-button" type="submit" disabled>Enviar voto</button></form><p class="hint">Um voto por aluno, de 1 ou 2 Turings. A cada 10 votos válidos, você recebe 1 Turing. Seus tokens não são gastos ao votar.</p></section>
+<section class="card ranking"><div class="section-title"><div><p class="eyebrow">RECONHECIMENTO DA TURMA</p><h2>Ranking</h2></div><button id="refresh" class="secondary">Atualizar</button></div><p class="hint">Ordenado pelo saldo atual de Turings. Atualiza a cada 8 segundos.</p><ol id="ranking"><li>Carregando…</li></ol></section></div>
+<section id="admin" class="card" hidden><p class="eyebrow">ADMINISTRAÇÃO</p><h2>Conduza a votação</h2><div class="admin-grid"><div><p>Controle quando a turma pode votar.</p><button id="open">Abrir votação</button> <button id="close" class="secondary">Pausar votação</button></div><form id="issue-form"><label for="issue-recipient">Emitir para</label><select id="issue-recipient" required></select><label for="issue-amount">Quantidade inteira de Turings</label><input id="issue-amount" type="number" min="1" step="1" value="1" required><button type="submit">Emitir Turings</button></form></div></section>
+<footer>Token TUR · sem casas decimais <span id="contract-address"></span></footer>
+</main></body></html>
